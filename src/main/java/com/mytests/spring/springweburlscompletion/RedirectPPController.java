@@ -54,4 +54,9 @@ public class RedirectPPController {
     public String rem5() {
         return "forward:/pp_test/{pv1}/unresolved";  // unresolvable, but resolves to incorrect targets
     }
+
+    @GetMapping("/re/pp/m6")
+    public String rem6() {
+        return "forward:/";  // try to complete paths from MyControllerWithTopLevelPlaceholder - incorrect
+    }
 }
